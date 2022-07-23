@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@100;400&family=Noto+Sans:ital,wght@1,300;1,400;1,500&family=Oswald:wght@200&family=Poiret+One&family=Roboto:ital,wght@1,300&family=Smooch&family=Tajawal:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black
+}
+body{
+    background-color: #F9F9F9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+::-webkit-scrollbar {
+    width: 7px;
+    direction: ltr;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #606060; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #827f7f; 
+}
+/* Start Header Section */
+header{
+    background-color: #fff;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    right: 0;
+    padding: 0 10px;
+    z-index: 5;
+}
+header::after{
+    content: "";
+    width: 97%;
+    height: 1px;
+    background-color: #ECECEC;
+    position: absolute;
+    bottom: 0
+}
+header .icon{
+    display: inline-flex;
+    justify-content: space-between;
+    align-self: center;
+}
+header .user-info img{
+    cursor: pointer;
+}
+header .icon svg,
+header .icon a,
+.navBar .icon svg,
+.navBar .icon a{
+    width: 30px;
+    margin: 5px;
+    align-self: center;
+    cursor: pointer;
+}
+/* Start PopUp */
+.popup{
+    background-color: #fff;
+    width: 230px;
+    height: 100vh;
+    position: fixed;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    top: 0;
+    z-index: 9;
+    right: 50px;
+    display: none;
+}
+.popup.opend{
+    display: block;
+}
+.popup .avatar {
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+}
+.popup .avatar .text{
+    padding-left: 15px;
+}
+.popup .avatar .text a{
+    color: blue;
+    font-size: 10px;
+}
+.popup hr{
+    height: 0.3px !important;
+    background-color: #909090
+}
+.popup ul{
+    list-style: none;
+    margin: 15px 0;
+}
+.popup ul li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+}
+.popup ul li:hover{
+    background-color: #e5e5e5;
+}
+.popup ul li svg,
+.popup ul li img{
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50%;
+    margin-right: 20px
+}
+.popup ul li p{
+    font-size: 11px
+}
+/* End PopUp */
+
+/* Start Navbar */
+.navBar{
+    background-color: #fff;
+    width: 185px;
+    height: 100vh;
+    position: fixed;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    top: 0;
+    z-index: 20;
+    left: -200px;
+    transition: left 0.2s linear 
+}
+.navBar.opend{
+    left:0
+}
+.navBar .icon {
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+    padding: 10px 20px 10px 20px;
+}
+.navBar hr{
+    height: 0.3px;
+    background-color: #909090
+}
+.navBar ul{
+    list-style: none;
+    margin: 15px 0;
+}
+.navBar ul > p{
+    font-size: 10px;
+    font-weight: bold;
+    color:#60607A;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+.navBar ul li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 20px 10px 20px;
+}
+.navBar ul li:hover,
+.navBar ul li.active{
+    background-color: #e5e5e5;
+}
+.navBar ul li svg,
+.navBar ul li img{
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50%;
+    margin-right: 20px
+}
+.navBar ul li p{
+    font-size: 12px;
+}
+.navBar ul.text{
+    padding: 7px;
+}
+.navBar ul.text p{
+    font-size: 11px;
+}
+.navBar ul.text span{
+    font-size: 10px;
+    color: #909090
+}
+/* End Navbar */
+header .search {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+header .search .input{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #d3d3d3;
+    align-self: center;
+}
+header .search .input input{
+    width: 100%;
+    border: none;
+    padding: 5px;
+    border-right: 1px solid #d3d3d3 !important;
+}
+@media (max-width: 767px){
+    header .search .input{
+        justify-content: end;
+        border: none;
+    }
+    header .search .input input{
+        display: none
+    }
+}
+header .search .input yt-icon{
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+header .search .input yt-icon:hover{
+    background-color: #f0efef;
+}
+header .search > yt-icon{
+    width: 25px;
+    height: 25px;
+    align-self: center;
+    padding: 0 5px;
+    cursor: pointer;
+}
+header .user-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .user-info yt-icon{
+    width: 20px;
+    height: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+header .user-info img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+/* End Header Section */
+/* Start Slider Section */
+.slider{
+    background-color: #fff;
+    position: sticky;
+    top: 50px;
+    z-index: 4;
+    overflow: hidden;
+}
+.slider ul{
+    list-style: none;
+    display: inline-flex;
+    position: relative;
+    right: -50px;
+    padding: 10px 8px;
+    
+}
+.slider ul li{
+    font-size: 12px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #dfdfdf;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    cursor: pointer;
+}
+.slider ul li:hover{
+    background-color: #dfdfdf;;
+}
+.slider ul li.active,
+.slider ul li:active{
+    background-color: #000;
+    color: #fff
+}
+/* End Slider Section */
+/* Start Aside Section */
+.page-content{
+    padding: 15px;
+    display: inline-block;
+    /* justify-content: space-between; */
+}
+.menu{
+    background-color: #fff;
+    width: 50px;
+    height: 100vh;
+    position: fixed;
+    top: 59px;
+    left: 0;
+    font-size: 8px;
+    text-align: center;
+    z-index: 5;
+}
+.menu .option{
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+.menu .option:hover{
+    background-color: #f0efef;
+}
+.menu .option p{
+    margin-top: 5px
+}
+/* End Aside Section */
+/* Start Body Section */
+.page-content .contain{
+    width: calc(100% - 50px);
+    position: relative;
+    right: -50px;
+}
+#videos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    column-gap: 10px
+}
+#videos .card{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#videos .card .video-img{
+    position: relative
+}
+#videos .card .video-img img{
+    width: 100%;
+    height: auto
+}
+#videos .card .video-img span{
+    font-size: 10px;
+    color: white;
+    padding: 2px;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 2px;
+}
+#videos .card .info{
+    display:flex;
+    padding: 15px 0;
+}
+#videos .card .info .logo{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+}
+#videos .card .info .text{
+    padding: 0 15px;
+    font-size: 14px;
+}
+#videos .card .text span{
+    display: block;
+    color: #606060;
+    font-size: 10px;
+    padding: 2px 0;
+}
+#videos .card .text .channel{
+    position: relative;
+}
+#videos .card .text .channel[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: -200%;
+    left: 0;
+    font-size: 12px;
+    color: white;
+    padding: 5px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 2px;
+
+}
+.page-content hr {
+    position: relative;
+    top: 20px;
+    border: none;
+    height: 4px;
+    background: #d4d4d4;
+    margin-bottom: 50px;
+}
+/* End videos Section */
+
+/* Start Shorts Section */
+.shorts .short-head{
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.shorts .short-head .icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.shorts .short-head .remove{
+    cursor: pointer;
+}
+.shorts .short-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    column-gap: 10px
+}
+.shorts .short{
+    cursor: pointer;
+}
+.shorts .short-img{
+    height: 250px;
+}
+.shorts .short-img img{
+    width: 100%;
+    height: 100%;
+}
+.shorts .text{
+    padding: 15px 0
+}
+.shorts .text span{
+    color: #606060;
+    font-size: 12px;
+    padding: 2px 0;
+}
+/* End Shorts Section */
