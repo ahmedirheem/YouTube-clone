@@ -2,7 +2,7 @@
 This project is a YouTube clone I create by using **HTML**, **CSS** and **Javascript**.  
 
 # Live Link
-[**live link**](https://ahmedirheem.github.io/MyLifo/)
+[**live link**](https://ahmedirheem.github.io/YouTube-clone/)
 
 # How to get the project locally
 * Press at https://github.com/ahmedirheem/YouTube-clone.git
